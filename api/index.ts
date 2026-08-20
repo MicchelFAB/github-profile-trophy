@@ -2,14 +2,13 @@ import { Card } from "../src/card.ts";
 import { CONSTANTS, parseParams } from "../src/utils.ts";
 import { COLORS, Theme } from "../src/theme.ts";
 import { Error400 } from "../src/error_page.ts";
-import "@std/dotenv/load";
 import { staticRenderRegeneration } from "../src/StaticRenderRegeneration/index.ts";
 import { GithubRepositoryService } from "../src/Repository/GithubRepository.ts";
 import { GithubApiService } from "../src/Services/GithubApiService.ts";
 import { ServiceError } from "../src/Types/index.ts";
 import { ErrorPage } from "../src/pages/Error.ts";
 import { cacheProvider } from "../src/config/cache.ts";
-import { load } from "@std/dotenv";
+import { load } from "https://jsr.io/@std/dotenv/0.225.2/mod.ts";
 await load({ export: true });
 
 
