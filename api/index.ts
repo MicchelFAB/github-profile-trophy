@@ -9,7 +9,9 @@ import { GithubApiService } from "../src/Services/GithubApiService.ts";
 import { ServiceError } from "../src/Types/index.ts";
 import { ErrorPage } from "../src/pages/Error.ts";
 import { cacheProvider } from "../src/config/cache.ts";
-import "jsr:@std/dotenv@^0.225.0/load";
+import { load } from "@std/dotenv";
+await load({ export: true });
+
 
 const serviceProvider = new GithubApiService();
 const client = new GithubRepositoryService(serviceProvider).repository;
